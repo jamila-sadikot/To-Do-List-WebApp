@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 function addTask() {
@@ -19,6 +19,7 @@ function addTask() {
 }
 
 listContainer.addEventListener("click", function (e) {
+    const target = e.target;
     if (e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData()
@@ -39,4 +40,3 @@ function showTask() {
     listContainer.innerHTML = localStorage.getItem("Data");
 }
 showTask();
-});
