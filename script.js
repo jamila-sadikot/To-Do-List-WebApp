@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function(){
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 function addTask() {
@@ -28,6 +29,7 @@ listContainer.addEventListener("click", function (e) {
     }
 }, false);
 
+
 function saveData() {
     localStorage.setItem("Data", listContainer.innerHTML);
 
@@ -37,3 +39,4 @@ function showTask() {
     listContainer.innerHTML = localStorage.getItem("Data");
 }
 showTask();
+});
